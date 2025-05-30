@@ -1,6 +1,12 @@
+import Header from "@/components/layout/Header";
 
-export const index = () => {
+const index = () => {
   return (
-    <div>index</div>
+    <div>
+        <Header />
+        <h1>Posts Page</h1>
+    </div>
   )
 }
+
+export default index;
