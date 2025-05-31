@@ -2,7 +2,7 @@ import UserCard from "@/components/common/UserCard";
 import UserModal from "@/components/common/UserModal";
 import Header from "@/components/layout/Header";
 import { UserProps } from "@/interfaces";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 
 const Users: React.FC<{ posts: UserProps[] }> = ({ posts }) => {
@@ -11,8 +11,13 @@ const Users: React.FC<{ posts: UserProps[] }> = ({ posts }) => {
 
       const handleAddUser = (newUser: UserProps) => {
         setUser({ ...newUser, id: posts.length + 1 });
-        console.log(user);
       };
+
+        useEffect(() => {
+          if (user) {
+            console.log(user);
+          }
+        }, [user]);
 
   return (
     <div className="flex flex-col h-screen">

@@ -28,7 +28,6 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
     ...prevUser,
     [name]: name === "id" ? Number(value) : value,
   }));
-    console.log(user);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
